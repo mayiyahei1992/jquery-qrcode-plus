@@ -18,8 +18,6 @@ $("#qrcode").qrcode({
   src: '/logo.png',
   imgRadius:10,
   bleed:0.14,
-  imgRadius:10,
-  bleed:0.14,
   imgBorder:true,
   imgBorderColor:'#ffc107'
 });
