@@ -131,7 +131,8 @@ for (function (a) {
                     foreground: "#000000",
                     bleed:0.14,
                     imgRadius:25,
-                    imgStroke:true
+                    imgBorder:true,
+                    imgBorderColor:'#fff'
                 }, b), c = function () {
                     var c, d, e, f, g, h, i, j, k, a = new QRCode(b.typeNumber, b.correctLevel),iw,ih,ww,wh;
                   
@@ -143,14 +144,13 @@ for (function (a) {
                         c.height = b.height,
                         d = c.getContext("2d"),
                         b.src && (e = new Image(), e.src = b.src, e.onload = function () {
-                            d.fillStyle = '#ffc107';//b.background;
-                            
+                            d.fillStyle = b.imgBorderColor;//b.background;
                             iw = b.width*(1-b.bleed) / 3;
                             ih = b.height*(1-b.bleed) / 3;
                             var imgx = (b.width - iw) / 2,imgy = (b.height - ih) / 2,bleedr = 1.1*b.imgRadius;
                             d.shadowBlur=15;
                             d.shadowColor='#000000';
-                            b.imgStroke && drawRoundedRect(d,imgx-iw*0.05,imgy-ih*0.05,iw*(1+0.1),ih*(1+0.1),bleedr,true,false);
+                            b.imgBorder && drawRoundedRect(d,imgx-iw*0.05,imgy-ih*0.05,iw*(1+0.1),ih*(1+0.1),bleedr,true,false);
                             roundedImg(d,e,imgx,imgy, iw, ih,b.imgRadius);
                             //circleImg(d,e,imgx, imgy, iw, ih);
                             //d.drawImage(e, imgx,imgy, iw, ih);
