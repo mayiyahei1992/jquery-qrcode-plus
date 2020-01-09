@@ -1,4 +1,4 @@
-# jquery-qrcode-plus
+﻿# jquery-qrcode-plus
 
 在[jquery-qrcode](https://github.com/jeromeetienne/jquery-qrcode "jquery-qrcode")的基础上 增加 自定义 
 
@@ -18,6 +18,9 @@ $("#qrcode").qrcode({
   src: '/logo.png',
   imgRadius:10,
   bleed:0.14,
-  imgStroke:true
+  imgRadius:10,
+  bleed:0.14,
+  imgBorder:true,
+  imgBorderColor:'#ffc107'
 });
 ```
